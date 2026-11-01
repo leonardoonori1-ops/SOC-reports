@@ -14,7 +14,7 @@ I report documentano attività di laboratorio su **Security Monitoring, Threat I
 
 | # | Area | Report | Competenze |
 |---|------|--------|------------|
-| 01 | **SIEM & Log Analysis** | Detection con Splunk | SIEM, SPL, correlazione eventi, rilevamento brute-force |
+| 01 | **SIEM & Log Analysis** | Detection brute force SSH con Splunk | SIEM, SPL, regex, correlazione eventi, tuning falsi positivi, dashboard, MITRE ATT&CK (T1110) |
 | 02 | **Threat Intelligence & IOC** | Analisi IOC su cattura di rete | IOC, MITRE ATT&CK (T1046), threat hunting, mitigazioni |
 | 03 | **Malware Analysis** | Vidar/Lumma Stealer, W32.Nimda, AdwCleaner | Analisi statica/dinamica, sandbox, IOC, hashing |
 | 04 | **Hardening & Access Control** | Active Directory (Windows Server 2022), permessi DAC (Linux) | Minimo privilegio, GPO, NTFS/RDP, audit dei permessi |
@@ -25,7 +25,7 @@ I report documentano attività di laboratorio su **Security Monitoring, Threat I
 ## Dettaglio delle aree
 
 ### 01 — SIEM & Log Analysis
-Monitoraggio e analisi di log di sicurezza con **Splunk** (linguaggio SPL): raccolta ed esplorazione dei log, query di correlazione per rilevare pattern di **brute-force** e produzione di alert. È il cuore del lavoro di un SOC Analyst di primo livello.
+Analisi dei log di autenticazione SSH di 4 server Linux con **Splunk** (linguaggio SPL): estrazione dei campi con regex, detection di un attacco **brute force** distribuito (33.253 tentativi, 182 IP esterni), correlazione tra login falliti e riusciti, **tuning dei falsi positivi** e dashboard SOC in Dashboard Studio. Attività mappata su **MITRE ATT&CK** (T1110) con raccomandazioni di hardening SSH.
 
 ### 02 — Threat Intelligence & IOC
 Estrazione e classificazione di **Indicatori di Compromissione (IOC)** da una cattura di traffico con Wireshark; attività mappata sul framework **MITRE ATT&CK** (tecnica T1046 — Network Service Discovery) con proposta di contromisure (firewall, IDS/IPS).
